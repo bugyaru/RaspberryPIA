@@ -8,8 +8,7 @@ package application;
 import com.bug.display.DisplayThread;
 import com.bug.keyPad.ButtonTread;
 import com.bug.keyPad.ButtonEvents;
-import com.pi4j.component.lcd.impl.I2CLcdDisplay;
-import com.pi4j.component.lcd.*;
+
 /**
  *
  * @author pusig
@@ -36,7 +35,7 @@ public class Application {
         Thread.sleep(60000);
         test.finish();
         dt.finish();
-        System.out.println(test.flag);
+        //System.out.println(test.flag);
 
     }
 
