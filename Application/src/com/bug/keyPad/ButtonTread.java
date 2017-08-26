@@ -5,8 +5,6 @@
  */
 package com.bug.keyPad;
 
-import com.bug.keyPad.ButtonEventsListener;
-import com.bug.keyPad.ButtonEvents;
 import java.io.IOException;
 import com.pi4j.gpio.extension.pcf.PCF8574GpioProvider;
 import com.pi4j.gpio.extension.pcf.PCF8574Pin;
@@ -69,7 +67,7 @@ public class ButtonTread extends Thread {
             }
             gpio.removeAllListeners();
             gpio.shutdown();
-            System.out.println("Exiting PCF8574GpioExample");
+            //System.out.println("Exiting PCF8574GpioExample");
         } catch (UnsupportedBusNumberException | IOException ex) {
             Logger.getLogger(ButtonTread.class.getName()).log(Level.SEVERE, null, ex);
         }
