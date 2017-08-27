@@ -18,6 +18,7 @@ class displayData {
     public int row=0;
     public int col=0;
     public boolean flChange = false;
+    public boolean bl = true;
     public int align = 0;
     public String message="";
 }
@@ -50,6 +51,9 @@ public class DisplayThread extends Thread {
                     lcd.write(displayDt.row,displayDt.col,displayDt.message);
                     displayDt.flChange=false;
                 }
+               
+                    lcd.setBacklight(displayDt.bl);
+                
             }
             
             
@@ -69,5 +73,8 @@ public class DisplayThread extends Thread {
         displayDt.message=message;
         displayDt.align=align;
         displayDt.flChange=true;
+    }
+    public void setDisplayLight(Boolean bl){
+        displayDt.bl=bl;
     }
 }
